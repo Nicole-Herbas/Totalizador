@@ -142,20 +142,20 @@ function DescuentoCategoria(categoria, precio) {
   return Math.round(precio * descuento * 100) / 100;
 }
 
-function CostoEnvio(pesoVolumetrico) {
+function CostoEnvio(pesoVolumetrico, cantidad) {
   let costo = 0;
   if (pesoVolumetrico > 10 && pesoVolumetrico <= 20) {
-    costo = 3.5;
+    costo = 3.5 * cantidad;
   } else if (pesoVolumetrico > 20 && pesoVolumetrico <= 40) {
-    costo = 5;
+    costo = 5 * cantidad;
   } else if (pesoVolumetrico > 40 && pesoVolumetrico <= 80) {
-    costo = 6;
+    costo = 6 * cantidad;
   } else if (pesoVolumetrico > 80 && pesoVolumetrico <= 100) {
-    costo = 6.5;
+    costo = 6.5 * cantidad;
   } else if (pesoVolumetrico > 100 && pesoVolumetrico <= 200) {
-    costo = 8;
+    costo = 8 * cantidad;
   } else if (pesoVolumetrico > 200) {
-    costo = 9;
+    costo = 9 * cantidad;
   }
   return costo;
 }

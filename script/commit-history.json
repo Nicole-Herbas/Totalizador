@@ -247,17 +247,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "506164bb1d72084374148711c145787f9de89363",
     "author": "Nicole",
     "commit": {
       "date": "2026-09-10T04:49:13.000Z",
       "message": "feat: el usuario puede ingresar el peso volumetrico por unidad",
-      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/HEAD"
+      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/506164bb1d72084374148711c145787f9de89363"
     },
     "stats": {
       "total": 13,
       "additions": 9,
       "deletions": 4,
+      "date": "2026-09-10"
+    },
+    "coverage": 97.87,
+    "test_count": 13,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Nicole",
+    "commit": {
+      "date": "2026-09-10T04:51:47.000Z",
+      "message": "fix: el usuario puede ver correctamente el costo por el peso volumetrico unitario multiplicado por la cantidad",
+      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/HEAD"
+    },
+    "stats": {
+      "total": 30,
+      "additions": 15,
+      "deletions": 15,
       "date": "2026-09-10"
     },
     "coverage": 97.87,

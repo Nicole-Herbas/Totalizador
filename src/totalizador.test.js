@@ -99,12 +99,12 @@ describe("DescuentoPorCategoria", () => {
 
 describe("PesoVolumetrico", () => {
   it("El usuario puede ver el costo de envío de acuerdo al peso volumétrico que especifique el usuario", () => {
-    expect(CostoEnvio(9)).toEqual(0);
-    expect(CostoEnvio(19)).toEqual(3.5);
-    expect(CostoEnvio(30)).toEqual(5);
-    expect(CostoEnvio(50)).toEqual(6);
-    expect(CostoEnvio(90)).toEqual(6.5);
-    expect(CostoEnvio(150)).toEqual(8);
-    expect(CostoEnvio(250)).toEqual(9);
+    expect(CostoEnvio(9, 2)).toEqual(0);
+    expect(CostoEnvio(19, 1)).toEqual(3.5);
+    expect(CostoEnvio(30, 2)).toEqual(10);
+    expect(CostoEnvio(50, 1)).toEqual(6);
+    expect(CostoEnvio(90, 1)).toEqual(6.5);
+    expect(CostoEnvio(150, 1)).toEqual(8);
+    expect(CostoEnvio(250, 1)).toEqual(9);
   });
 });

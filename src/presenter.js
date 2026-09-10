@@ -80,7 +80,7 @@ form.addEventListener("submit", (event) => {
   const descuento = Descuento(precioNeto);
   const impuestoCategoria = ImpuestoCategoria(categoria.value, precioNeto);
   const descuentoCategoria = DescuentoCategoria(categoria.value, precioNeto);
-  const costoEnvio = CostoEnvio(Number.parseInt(pesoVolumetrico.value));
+  const costoEnvio = CostoEnvio(Number.parseInt(pesoVolumetrico.value), cantidad);
 
   PrecioNetoDiv.innerHTML = 
     "<p>Precio neto = $" + precioNeto + "</p>";
