@@ -472,9 +472,39 @@
     "testId": 16
   },
   {
-    "commitId": "HEAD",
+    "commitId": "22593b5f90042b128d9ebdd60026ff7ff020ee8b",
     "commitName": "feat: el usuario puede ver un descuento especifico si cumple con categroia, precio neto y tipo",
     "commitTimestamp": 1789017106098,
     "testId": 16
+  },
+  {
+    "numPassedTests": 15,
+    "failedTests": 1,
+    "numTotalTests": 16,
+    "timestamp": 1789017307685,
+    "success": false,
+    "testId": 17
+  },
+  {
+    "numPassedTests": 15,
+    "failedTests": 1,
+    "numTotalTests": 16,
+    "timestamp": 1789017994658,
+    "success": false,
+    "testId": 17
+  },
+  {
+    "numPassedTests": 16,
+    "failedTests": 0,
+    "numTotalTests": 16,
+    "timestamp": 1789018038262,
+    "success": true,
+    "testId": 17
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: calcula el precio total tomando en cuenta todo",
+    "commitTimestamp": 1789018068031,
+    "testId": 17
   }
 ]

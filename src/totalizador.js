@@ -171,13 +171,13 @@ function TipoCliente(valor, tipo) {
       tarifa = 0;
       break;
     case "Recurrente":
-      tarifa = 0.05;
+      tarifa = 0.005;
       break;
     case "Antiguo Recurrente":
-      tarifa = 0.05;
+      tarifa = 0.01;
       break;
     case "Especial":
-      tarifa = 0.09;
+      tarifa = 0.015;
       break;
   }
   return tarifa;
@@ -200,4 +200,62 @@ function DescuentoTipoCliente(precioNeto, tipo, categoria) {
   return descuento;
 }
 
-export { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria, DescuentoCategoria, CostoEnvio, ListaTipoCliente, TipoCliente, DescuentoTipoCliente };
+function PrecioTotalFinal(
+  cantidad,
+  precio,
+  estado,
+  categoria,
+  pesoVolumetrico,
+  tipoCliente
+) {
+  const neto = PrecioNeto(cantidad, precio);
+
+  // Descuento general según el monto
+  const descuento = Descuento(neto);
+
+  // Descuento adicional por categoría
+  const descuentoCategoria = DescuentoCategoria(categoria, neto);
+
+  // Descuento fijo según tipo de cliente y categoría
+  const descuentoTipoCliente = DescuentoTipoCliente(
+    neto,
+    tipoCliente,
+    categoria
+  );
+
+  // Precio sobre el cual se calcula el impuesto
+  const precioConDescuento =
+    neto -
+    descuento -
+    descuentoCategoria -
+    descuentoTipoCliente;
+
+  // Impuesto estatal + impuesto adicional de categoría
+  const impuesto = ImpuestoAplicado(estado, precioConDescuento);
+  const impuestoCategoria = ImpuestoCategoria(
+    categoria,
+    precioConDescuento
+  );
+
+  // Costo de envío
+  const costoEnvio = CostoEnvio(
+    pesoVolumetrico,
+    cantidad
+  );
+
+  // Descuento del cliente sobre el envío
+  const descuentoEnvio =
+    costoEnvio * TipoCliente(costoEnvio, tipoCliente);
+
+  return Math.round(
+    (
+      precioConDescuento +
+      impuesto +
+      impuestoCategoria +
+      costoEnvio -
+      descuentoEnvio
+    ) * 100
+  ) / 100;
+}
+
+export { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria, DescuentoCategoria, CostoEnvio, ListaTipoCliente, TipoCliente, DescuentoTipoCliente, PrecioTotalFinal };

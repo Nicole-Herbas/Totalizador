@@ -1,4 +1,4 @@
-import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria, DescuentoCategoria, CostoEnvio, ListaTipoCliente, TipoCliente } from "./totalizador.js";
+import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria, DescuentoCategoria, CostoEnvio, ListaTipoCliente, TipoCliente, NuevoPrecioTotal } from "./totalizador.js";
 
 const first = document.querySelector("#cantidad-items");
 const second = document.querySelector("#precio-unitario");
@@ -118,5 +118,5 @@ form.addEventListener("submit", (event) => {
   descuentoClienteDiv.innerHTML =
     "<p>Descuento para " + tipoCliente.value + " (" + tasasTipoCliente[tipoCliente.value] + "%) = $" + descuentoCliente + "</p>";
   precioTotalDiv.innerHTML =
-    "<p>Precio total (descuento e impuesto) = $" + PrecioTotal(cantidad, precio, estado.value, categoria.value) + "</p>";
+    "<p>Precio total (descuento e impuesto) = $" + PrecioTotalFinal(cantidad, precio, estado.value, categoria.value, Number.parseInt(pesoVolumetrico.value), tipoCliente.value, tipoCliente.value) + "</p>";
 });

@@ -1,4 +1,4 @@
-import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria, DescuentoCategoria, CostoEnvio, TipoCliente, DescuentoTipoCliente } from "./totalizador";
+import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria, DescuentoCategoria, CostoEnvio, TipoCliente, DescuentoTipoCliente, PrecioTotalFinal } from "./totalizador";
 
 describe("PrecioNeto", () => {
   it("Calcular el precio neto de la compra multiplicando la cantidad por el precio unitario", () => {
@@ -112,9 +112,9 @@ describe("PesoVolumetrico", () => {
 describe("Tipo de cliente", () => {
   it("El usuario puede ver la aplicación de tarifas especiales para el costo de envio de acuerdo al tipo de client", () => {
     expect(TipoCliente(10, "Normal")).toEqual(0);
-    expect(TipoCliente(10, "Recurrente")).toEqual(0.05);
-    expect(TipoCliente(5, "Antiguo Recurrente")).toEqual(0.05);
-    expect(TipoCliente(6, "Especial")).toEqual(0.09);
+    expect(TipoCliente(10, "Recurrente")).toEqual(0.005);
+    expect(TipoCliente(5, "Antiguo Recurrente")).toEqual(0.01);
+    expect(TipoCliente(6, "Especial")).toEqual(0.015);
   });
 });
 
@@ -123,4 +123,23 @@ describe("Descuento por tipo de cliente", () => {
     expect(DescuentoTipoCliente(4000, "Recurrente", "Alimentos")).toEqual(100);
     expect(DescuentoTipoCliente(8000, "Especial", "Electrónicos")).toEqual(200);
   });
+});
+
+describe("Nuevo precio TOTAL", () => {
+
+  it("Calcular el precio total final de la compra", () => {
+
+    expect(
+      PrecioTotalFinal(
+        1000,
+        3,
+        "Texas",
+        "Bebidas alcohólicas",
+        30,
+        "Recurrente"
+      )
+    ).toEqual(8202.63);
+
+  });
+
 });

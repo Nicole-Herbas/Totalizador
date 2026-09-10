@@ -304,12 +304,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "22593b5f90042b128d9ebdd60026ff7ff020ee8b",
     "author": "Nicole",
     "commit": {
       "date": "2026-09-10T05:11:45.000Z",
       "message": "feat: el usuario puede ver un descuento especifico si cumple con categroia, precio neto y tipo",
-      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/HEAD"
+      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/22593b5f90042b128d9ebdd60026ff7ff020ee8b"
     },
     "stats": {
       "total": 34,
@@ -319,6 +319,25 @@
     },
     "coverage": 97.39,
     "test_count": 15,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Nicole",
+    "commit": {
+      "date": "2026-09-10T05:27:46.000Z",
+      "message": "feat: calcula el precio total tomando en cuenta todo",
+      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/HEAD"
+    },
+    "stats": {
+      "total": 99,
+      "additions": 88,
+      "deletions": 11,
+      "date": "2026-09-10"
+    },
+    "coverage": 97.6,
+    "test_count": 16,
     "failed_tests": 0,
     "conclusion": "success"
   }
