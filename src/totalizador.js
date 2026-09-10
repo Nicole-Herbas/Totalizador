@@ -46,7 +46,7 @@ function Descuento(precio) {
     descuento = 0.15;
   }
 
-  return precio * descuento;
+  return Math.round(precio * descuento);;
 }
 
 export { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento };

@@ -82,9 +82,39 @@
     "testId": 3
   },
   {
-    "commitId": "HEAD",
+    "commitId": "77b5158e21ded1d8132dbff7d47e8bf74bd23467",
     "commitName": "feat: Se puede ver el descuento aplicado dependiendo del precio de la compra",
     "commitTimestamp": 1789008395288,
     "testId": 3
+  },
+  {
+    "numPassedTests": 4,
+    "failedTests": 2,
+    "numTotalTests": 6,
+    "timestamp": 1789008772546,
+    "success": false,
+    "testId": 4
+  },
+  {
+    "numPassedTests": 4,
+    "failedTests": 1,
+    "numTotalTests": 5,
+    "timestamp": 1789009030479,
+    "success": false,
+    "testId": 4
+  },
+  {
+    "numPassedTests": 5,
+    "failedTests": 0,
+    "numTotalTests": 5,
+    "timestamp": 1789009072319,
+    "success": true,
+    "testId": 4
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "fix: redondear descuento aplicado a dos decimales",
+    "commitTimestamp": 1789009117852,
+    "testId": 4
   }
 ]

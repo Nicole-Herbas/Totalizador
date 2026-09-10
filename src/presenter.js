@@ -14,6 +14,13 @@ const tasasImpuesto = {
   Alabama: 4,
   California: 8.25,
 };
+const tasasDescuento = {
+  1000: 3,
+  3000: 5,
+  7000: 7,
+  10000: 10,
+  30000: 15,
+};
 
 ListaEstados().forEach((nombreEstado) => {
   const opcion = document.createElement("option");
@@ -34,7 +41,7 @@ form.addEventListener("submit", (event) => {
   PrecioNetoDiv.innerHTML = 
     "<p>Precio neto = " + precioNeto + "</p>";
   descuentoDiv.innerHTML =
-    "<p>Descuento = " + descuento + "</p>";
+    "<p>Descuento " + tasasDescuento[Object.keys(tasasDescuento).find((k) => Number(k) <= precioNeto)] + "% = " + descuento + "</p>";
   impuestoDiv.innerHTML =
     "<p>Impuesto para " + estado.value + " (" + tasasImpuesto[estado.value] + "%) = " + impuesto + "</p>";
 });

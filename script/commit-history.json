@@ -57,12 +57,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "77b5158e21ded1d8132dbff7d47e8bf74bd23467",
     "author": "Nicole",
     "commit": {
       "date": "2026-09-10T02:46:32.000Z",
       "message": "feat: Se puede ver el descuento aplicado dependiendo del precio de la compra",
-      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/HEAD"
+      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/77b5158e21ded1d8132dbff7d47e8bf74bd23467"
     },
     "stats": {
       "total": 47,
@@ -71,6 +71,25 @@
       "date": "2026-09-10"
     },
     "coverage": 85.71,
+    "test_count": 5,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Nicole",
+    "commit": {
+      "date": "2026-09-10T02:58:35.000Z",
+      "message": "fix: redondear descuento aplicado a dos decimales",
+      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/HEAD"
+    },
+    "stats": {
+      "total": 17,
+      "additions": 14,
+      "deletions": 3,
+      "date": "2026-09-10"
+    },
+    "coverage": 100,
     "test_count": 5,
     "failed_tests": 0,
     "conclusion": "success"

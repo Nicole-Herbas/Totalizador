@@ -25,5 +25,9 @@ describe("ImpuestoAplicado", () => {
 describe("Descuento", () => {
   it("Calcular el descuento aplicado a la compra", () => {
     expect(Descuento(1000)).toEqual(30);
+    expect(Descuento(3000)).toEqual(150);
+    expect(Descuento(7000)).toEqual(490);
+    expect(Descuento(10000)).toEqual(1000);
+    expect(Descuento(30000)).toEqual(4500);
   });
 });
