@@ -74,11 +74,12 @@ function MensajeInvalido(cantidad, precio) {
   return "";
 }
 
-function PrecioTotal(cantidad, precio, estado) {
+function PrecioTotal(cantidad, precio, estado, categoria) {
   const neto = PrecioNeto(cantidad, precio);
   const impuesto = ImpuestoAplicado(estado, neto);
   const descuento = Descuento(neto);
-  return neto + impuesto - descuento;
+  const impuestoCategoria = ImpuestoCategoria(categoria, neto);
+  return neto + impuesto + impuestoCategoria - descuento;
 }
 
 function ListaCategoria() {

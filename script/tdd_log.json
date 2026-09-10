@@ -270,9 +270,55 @@
     "testId": 9
   },
   {
-    "commitId": "HEAD",
+    "commitId": "2aa8b96c3182c52077d990ce7934be2a2479e5de",
     "commitName": "feat: Se puede ver el impuesto aplicado dependiendo a la categoria del producto",
     "commitTimestamp": 1789013364379,
     "testId": 9
+  },
+  {
+    "numPassedTests": 10,
+    "failedTests": 1,
+    "numTotalTests": 11,
+    "timestamp": 1789013601748,
+    "success": false,
+    "testId": 10
+  },
+  {
+    "numPassedTests": 10,
+    "failedTests": 1,
+    "numTotalTests": 11,
+    "timestamp": 1789013689759,
+    "success": false,
+    "testId": 10
+  },
+  {
+    "numPassedTests": 10,
+    "failedTests": 1,
+    "numTotalTests": 11,
+    "timestamp": 1789013855869,
+    "success": false,
+    "testId": 10
+  },
+  {
+    "numPassedTests": 10,
+    "failedTests": 1,
+    "numTotalTests": 11,
+    "timestamp": 1789013959913,
+    "success": false,
+    "testId": 10
+  },
+  {
+    "numPassedTests": 11,
+    "failedTests": 0,
+    "numTotalTests": 11,
+    "timestamp": 1789014061020,
+    "success": true,
+    "testId": 10
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: el usuario puede ver el precio total de su compra incluyendo impuesto por clasificacion si aplica",
+    "commitTimestamp": 1789014088644,
+    "testId": 10
   }
 ]

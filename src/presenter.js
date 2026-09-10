@@ -76,5 +76,5 @@ form.addEventListener("submit", (event) => {
   impuestoCategoriaDiv.innerHTML =
     "<p>Impuesto para " + categoria.value + " (" + tasasImpuestoCategoria[categoria.value] + "%) = $" + ImpuestoCategoria(categoria.value, precioNeto) + "</p>";
     precioTotalDiv.innerHTML =
-    "<p>Precio total (descuento e impuesto) = $" + PrecioTotal(cantidad, precio, estado.value) + "</p>";
+    "<p>Precio total (descuento e impuesto) = $" + PrecioTotal(cantidad, precio, estado.value, categoria.value) + "</p>";
 });

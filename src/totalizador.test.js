@@ -51,7 +51,7 @@ describe("MensajeInválido", () => {
 
 describe("PrecioTotal", () => {
   it("Calcular el precio total de la compra sumando el precio neto, el impuesto y restando el descuento", () => {
-    expect(PrecioTotal(1000, 3, "Texas")).toEqual(3037.5);
+    expect(PrecioTotal(1000, 3, "Texas", "Varios")).toEqual(3037.5);
   });
 });
 
@@ -70,5 +70,17 @@ describe("ImpuestoPorCategoria", () => {
     expect(ImpuestoCategoria("Electrónicos", 60)).toEqual(2.4);
     expect(ImpuestoCategoria("Vestimenta", 60)).toEqual(1.2);
     expect(ImpuestoCategoria("Varios", 60)).toEqual(0);
+  });
+});
+
+describe("NuevoPrecioTotal", () => {
+  it("Calcular el precio total de la compra sumando el precio neto, el impuesto por state, el impuesto por categoria y restando el descuento", () => {
+    expect(PrecioTotal(1000, 3, "Texas", "Bebidas alcohólicas")).toEqual(3247.5);
+    expect(PrecioTotal(1000, 3, "Texas", "Alimentos")).toEqual(3037.5);
+    expect(PrecioTotal(1000, 3, "Texas", "Material de escritorio")).toEqual(3037.5);
+    expect(PrecioTotal(1000, 3, "Texas", "Muebles")).toEqual(3127.5);
+    expect(PrecioTotal(1000, 3, "Texas", "Electrónicos")).toEqual(3157.5);
+    expect(PrecioTotal(1000, 3, "Texas", "Vestimenta")).toEqual(3097.5);
+    expect(PrecioTotal(1000, 3, "Texas", "Varios")).toEqual(3037.5);
   });
 });
