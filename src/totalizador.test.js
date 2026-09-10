@@ -1,4 +1,4 @@
-import { PrecioNeto, ListaEstados, ImpuestoAplicado } from "./totalizador";
+import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento } from "./totalizador";
 
 describe("PrecioNeto", () => {
   it("Calcular el precio neto de la compra multiplicando la cantidad por el precio unitario", () => {
@@ -15,5 +15,15 @@ describe("ListaEstados", () => {
 describe("ImpuestoAplicado", () => {
   it("Calcular el impuesto aplicado a la compra", () => {
     expect(ImpuestoAplicado("Texas", 60)).toEqual(3.75);
+    expect(ImpuestoAplicado("Utah", 60)).toEqual(3.99);
+    expect(ImpuestoAplicado("Nevada", 60)).toEqual(4.8);
+    expect(ImpuestoAplicado("Alabama", 60)).toEqual(2.4);
+    expect(ImpuestoAplicado("California", 60)).toEqual(4.95);
+  });
+});
+
+describe("Descuento", () => {
+  it("Calcular el descuento aplicado a la compra", () => {
+    expect(Descuento(1000)).toEqual(30);
   });
 });

@@ -28,4 +28,25 @@ function ImpuestoAplicado(estado, precio) {
   return precio * impuesto;
 }
 
-export { PrecioNeto, ListaEstados, ImpuestoAplicado };
+function Descuento(precio) {
+  let descuento = 0;
+  if (precio >= 1000) {
+    descuento = 0.03;
+  }
+  if (precio >= 3000) {
+    descuento = 0.05;
+  }
+  if (precio >= 7000) {
+    descuento = 0.07;
+  }
+  if (precio >= 10000) {
+    descuento = 0.1;
+  }
+  if (precio >= 30000) {
+    descuento = 0.15;
+  }
+
+  return precio * descuento;
+}
+
+export { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento };

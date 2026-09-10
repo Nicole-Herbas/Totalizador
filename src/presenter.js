@@ -1,11 +1,12 @@
-import { PrecioNeto, ListaEstados, ImpuestoAplicado } from "./totalizador.js";
+import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento } from "./totalizador.js";
 
 const first = document.querySelector("#cantidad-items");
 const second = document.querySelector("#precio-unitario");
 const estado = document.querySelector("#codigo-estado");
 const form = document.querySelector("#totalizar-form");
-const div = document.querySelector("#precio-neto");
+const PrecioNetoDiv = document.querySelector("#precio-neto");
 const impuestoDiv = document.querySelector("#impuesto-aplicado");
+const descuentoDiv = document.querySelector("#descuento-aplicado");
 const tasasImpuesto = {
   Utah: 6.65,
   Nevada: 8,
@@ -28,8 +29,12 @@ form.addEventListener("submit", (event) => {
   const precio = Number.parseInt(second.value);
   const precioNeto = PrecioNeto(cantidad, precio);
   const impuesto = ImpuestoAplicado(estado.value, precioNeto);
+  const descuento = Descuento(precioNeto);
 
-  div.innerHTML = "<p>" + precioNeto + "</p>";
+  PrecioNetoDiv.innerHTML = 
+    "<p>Precio neto = " + precioNeto + "</p>";
+  descuentoDiv.innerHTML =
+    "<p>Descuento = " + descuento + "</p>";
   impuestoDiv.innerHTML =
     "<p>Impuesto para " + estado.value + " (" + tasasImpuesto[estado.value] + "%) = " + impuesto + "</p>";
 });

@@ -38,12 +38,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "2f14a015b507261316ffaba80121cf0f9cb7e84d",
     "author": "Nicole",
     "commit": {
       "date": "2026-09-10T02:31:03.000Z",
       "message": "feat: Se puede ver el impuesto aplicado a la compra dependiendo del estado seleccionado",
-      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/HEAD"
+      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/2f14a015b507261316ffaba80121cf0f9cb7e84d"
     },
     "stats": {
       "total": 49,
@@ -53,6 +53,25 @@
     },
     "coverage": 50,
     "test_count": 4,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Nicole",
+    "commit": {
+      "date": "2026-09-10T02:46:32.000Z",
+      "message": "feat: Se puede ver el descuento aplicado dependiendo del precio de la compra",
+      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/HEAD"
+    },
+    "stats": {
+      "total": 47,
+      "additions": 42,
+      "deletions": 5,
+      "date": "2026-09-10"
+    },
+    "coverage": 85.71,
+    "test_count": 5,
     "failed_tests": 0,
     "conclusion": "success"
   }

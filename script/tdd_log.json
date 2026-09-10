@@ -60,9 +60,31 @@
     "testId": 2
   },
   {
-    "commitId": "HEAD",
+    "commitId": "2f14a015b507261316ffaba80121cf0f9cb7e84d",
     "commitName": "feat: Se puede ver el impuesto aplicado a la compra dependiendo del estado seleccionado",
     "commitTimestamp": 1789007466414,
     "testId": 2
+  },
+  {
+    "numPassedTests": 4,
+    "failedTests": 1,
+    "numTotalTests": 5,
+    "timestamp": 1789007887931,
+    "success": false,
+    "testId": 3
+  },
+  {
+    "numPassedTests": 5,
+    "failedTests": 0,
+    "numTotalTests": 5,
+    "timestamp": 1789008338619,
+    "success": true,
+    "testId": 3
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: Se puede ver el descuento aplicado dependiendo del precio de la compra",
+    "commitTimestamp": 1789008395288,
+    "testId": 3
   }
 ]
