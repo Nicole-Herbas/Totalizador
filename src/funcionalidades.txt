@@ -1,0 +1,9 @@
+Como usuario quiero poder ver el precio neto a mi compra
+Como usuario quiero poder ver el impuesto aplicado a mi compra
+Como usuario quiero poder ver el descuento aplicado a mi compra
+Quiero poder elegir el estado de una lista desplegable para evitar errores al introducir los estados
+Quiero poder ver el mensaje de errror cantidad invalida (negativa o cero) cuando corresponda
+Quiero poder ver un mensaje de error cuando se ingresan codigos de estado invalidos
+Cancelar compra
+Quiero poder ver el mensajes de errror cuando se ingresa informacion erronea en precio o cantidad
+Como usuario quiero poder confirmar mi compra

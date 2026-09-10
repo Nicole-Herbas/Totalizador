@@ -1,0 +1,21 @@
+[
+  {
+    "sha": "HEAD",
+    "author": "Nicole",
+    "commit": {
+      "date": "2026-09-10T01:52:40.000Z",
+      "message": "feat: Calcular el precio neto de la compra multiplicando la cantidad por el precio unitario",
+      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/HEAD"
+    },
+    "stats": {
+      "total": 57,
+      "additions": 40,
+      "deletions": 17,
+      "date": "2026-09-10"
+    },
+    "coverage": 100,
+    "test_count": 2,
+    "failed_tests": 0,
+    "conclusion": "success"
+  }
+]
