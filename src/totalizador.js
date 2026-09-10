@@ -85,4 +85,32 @@ function ListaCategoria() {
   return ["Alimentos","Bebidas alcohólicas","Material de escritorio", "Muebles","Electrónicos","Vestimenta","Varios"];
 }
 
-export { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria };
+function ImpuestoCategoria(categoria, precio) {
+  let impuesto = 0;
+  switch (categoria) {
+    case "Alimentos":
+      impuesto = 0;
+      break;
+    case "Bebidas alcohólicas":
+      impuesto = 0.07;
+      break;
+    case "Material de escritorio":
+      impuesto = 0;
+      break;
+    case "Muebles":
+      impuesto = 0.03;
+      break;
+    case "Electrónicos":
+      impuesto = 0.04;
+      break;
+    case "Vestimenta":
+      impuesto = 0.02;
+      break;
+    case "Varios":
+      impuesto = 0;
+      break;
+  }
+  return Math.round(precio * impuesto * 100) / 100;
+}
+
+export { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria };

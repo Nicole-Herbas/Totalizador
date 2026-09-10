@@ -1,4 +1,4 @@
-import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria } from "./totalizador";
+import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria } from "./totalizador";
 
 describe("PrecioNeto", () => {
   it("Calcular el precio neto de la compra multiplicando la cantidad por el precio unitario", () => {
@@ -58,5 +58,17 @@ describe("PrecioTotal", () => {
 describe("ListaCategoria", () => {
   it("Elegir la categoria del item de una lista desplegable", () => {
     expect(ListaCategoria()).toEqual(["Alimentos","Bebidas alcohólicas","Material de escritorio", "Muebles","Electrónicos","Vestimenta","Varios"]);
+  });
+});
+
+describe("ImpuestoPorCategoria", () => {
+  it("Calcular el impuesto aplicado a la compra por categoria", () => {
+    expect(ImpuestoCategoria("Alimentos", 60)).toEqual(0);
+    expect(ImpuestoCategoria("Bebidas alcohólicas", 60)).toEqual(4.2);
+    expect(ImpuestoCategoria("Material de escritorio", 60)).toEqual(0);
+    expect(ImpuestoCategoria("Muebles", 60)).toEqual(1.8);
+    expect(ImpuestoCategoria("Electrónicos", 60)).toEqual(2.4);
+    expect(ImpuestoCategoria("Vestimenta", 60)).toEqual(1.2);
+    expect(ImpuestoCategoria("Varios", 60)).toEqual(0);
   });
 });

@@ -152,12 +152,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "110dab7138c16f1cc7338546eeb27565825cc078",
     "author": "Nicole",
     "commit": {
       "date": "2026-09-10T03:58:58.000Z",
       "message": "feat: Se puede elegir la categoria del item desde una lista desplegable",
-      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/HEAD"
+      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/110dab7138c16f1cc7338546eeb27565825cc078"
     },
     "stats": {
       "total": 30,
@@ -167,6 +167,25 @@
     },
     "coverage": 95.56,
     "test_count": 9,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Nicole",
+    "commit": {
+      "date": "2026-09-10T04:09:23.000Z",
+      "message": "feat: Se puede ver el impuesto aplicado dependiendo a la categoria del producto",
+      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/HEAD"
+    },
+    "stats": {
+      "total": 61,
+      "additions": 57,
+      "deletions": 4,
+      "date": "2026-09-10"
+    },
+    "coverage": 96.77,
+    "test_count": 10,
     "failed_tests": 0,
     "conclusion": "success"
   }

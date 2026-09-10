@@ -232,9 +232,47 @@
     "testId": 8
   },
   {
-    "commitId": "HEAD",
+    "commitId": "110dab7138c16f1cc7338546eeb27565825cc078",
     "commitName": "feat: Se puede elegir la categoria del item desde una lista desplegable",
     "commitTimestamp": 1789012740082,
     "testId": 8
+  },
+  {
+    "numPassedTests": 9,
+    "failedTests": 1,
+    "numTotalTests": 10,
+    "timestamp": 1789012997576,
+    "success": false,
+    "testId": 9
+  },
+  {
+    "numPassedTests": 9,
+    "failedTests": 1,
+    "numTotalTests": 10,
+    "timestamp": 1789013139438,
+    "success": false,
+    "testId": 9
+  },
+  {
+    "numPassedTests": 9,
+    "failedTests": 1,
+    "numTotalTests": 10,
+    "timestamp": 1789013194748,
+    "success": false,
+    "testId": 9
+  },
+  {
+    "numPassedTests": 10,
+    "failedTests": 0,
+    "numTotalTests": 10,
+    "timestamp": 1789013293543,
+    "success": true,
+    "testId": 9
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: Se puede ver el impuesto aplicado dependiendo a la categoria del producto",
+    "commitTimestamp": 1789013364379,
+    "testId": 9
   }
 ]
