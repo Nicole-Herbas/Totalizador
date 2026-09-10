@@ -95,12 +95,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "868923e78990185db19925a610e120de8628d56b",
     "author": "Nicole",
     "commit": {
       "date": "2026-09-10T03:06:39.000Z",
       "message": "feat: El usuario puede ver un mensaje de error si se deja campos vacíos",
-      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/HEAD"
+      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/868923e78990185db19925a610e120de8628d56b"
     },
     "stats": {
       "total": 28,
@@ -110,6 +110,25 @@
     },
     "coverage": 96.77,
     "test_count": 6,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Nicole",
+    "commit": {
+      "date": "2026-09-10T03:24:11.000Z",
+      "message": "feat: El usuario puede ver un mensaje de error si ingresa valores invalidos",
+      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/HEAD"
+    },
+    "stats": {
+      "total": 37,
+      "additions": 32,
+      "deletions": 5,
+      "date": "2026-09-10"
+    },
+    "coverage": 95,
+    "test_count": 7,
     "failed_tests": 0,
     "conclusion": "success"
   }

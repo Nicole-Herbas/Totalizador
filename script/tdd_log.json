@@ -134,9 +134,47 @@
     "testId": 5
   },
   {
-    "commitId": "HEAD",
+    "commitId": "868923e78990185db19925a610e120de8628d56b",
     "commitName": "feat: El usuario puede ver un mensaje de error si se deja campos vacíos",
     "commitTimestamp": 1789009602504,
     "testId": 5
+  },
+  {
+    "numPassedTests": 6,
+    "failedTests": 1,
+    "numTotalTests": 7,
+    "timestamp": 1789009944938,
+    "success": false,
+    "testId": 6
+  },
+  {
+    "numPassedTests": 6,
+    "failedTests": 1,
+    "numTotalTests": 7,
+    "timestamp": 1789010003170,
+    "success": false,
+    "testId": 6
+  },
+  {
+    "numPassedTests": 7,
+    "failedTests": 0,
+    "numTotalTests": 7,
+    "timestamp": 1789010116988,
+    "success": true,
+    "testId": 6
+  },
+  {
+    "numPassedTests": 7,
+    "failedTests": 0,
+    "numTotalTests": 7,
+    "timestamp": 1789010302183,
+    "success": true,
+    "testId": 6
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: El usuario puede ver un mensaje de error si ingresa valores invalidos",
+    "commitTimestamp": 1789010654664,
+    "testId": 6
   }
 ]

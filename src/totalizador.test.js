@@ -1,4 +1,4 @@
-import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError } from "./totalizador";
+import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido } from "./totalizador";
 
 describe("PrecioNeto", () => {
   it("Calcular el precio neto de la compra multiplicando la cantidad por el precio unitario", () => {
@@ -37,5 +37,14 @@ describe("MensajeError", () => {
     expect(MensajeError("", 3, "Texas")).toBe("Por favor, complete todos los campos");
     expect(MensajeError(2, "", "Texas")).toBe("Por favor, complete todos los campos");
     expect(MensajeError(2, 3, "")).toBe("Por favor, complete todos los campos");
+  });
+});
+
+describe("MensajeInválido", () => {
+  it("Mostrar mensaje de error cuando se ingresa cantidades inválidas", () => {
+    expect(MensajeInvalido(0, 3)).toBe("La cantidad de items no puede ser cero");
+    expect(MensajeInvalido(2, 0)).toBe("El precio unitario no puede ser cero");
+    expect(MensajeInvalido(-1, 3)).toBe("La cantidad de items debe ser un número positivo");
+    expect(MensajeInvalido(2, -1)).toBe("El precio unitario debe ser un número positivo");
   });
 });

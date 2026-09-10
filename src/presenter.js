@@ -1,4 +1,4 @@
-import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError } from "./totalizador.js";
+import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido } from "./totalizador.js";
 
 const first = document.querySelector("#cantidad-items");
 const second = document.querySelector("#precio-unitario");
@@ -34,8 +34,9 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const mensajeError = MensajeError(first.value, second.value, estado.value);
-  mensajeErrorDiv.textContent = mensajeError;
-  if (mensajeError) return;
+  const mensajeInvalido = MensajeInvalido(first.value, second.value);
+  mensajeErrorDiv.textContent = mensajeError || mensajeInvalido;
+  if (mensajeError || mensajeInvalido) return;
 
   const cantidad = Number.parseInt(first.value);
   const precio = Number.parseInt(second.value);

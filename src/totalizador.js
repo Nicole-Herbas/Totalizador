@@ -57,4 +57,21 @@ function MensajeError(cantidad, precio, estado) {
   return "";
 }
 
-export { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError };
+function MensajeInvalido(cantidad, precio) {
+  if (cantidad === 0) {
+    return "La cantidad de items no puede ser cero";
+  }
+  if (precio === 0) {
+    return "El precio unitario no puede ser cero";
+  }
+  if (cantidad < 0) {
+    return "La cantidad de items debe ser un número positivo";
+  }
+  if (precio < 0) {
+    return "El precio unitario debe ser un número positivo";
+  }
+
+  return "";
+}
+
+export { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido };
