@@ -2,4 +2,8 @@ function PrecioNeto(cantidad, precio) {
   return cantidad * precio;
 }
 
-export default PrecioNeto;
+function ListaEstados() {
+  return ["Utah","Nevada","Texas", "Alabama","California"];
+}
+
+export { PrecioNeto, ListaEstados };

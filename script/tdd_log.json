@@ -16,9 +16,31 @@
     "testId": 0
   },
   {
-    "commitId": "HEAD",
+    "commitId": "0d6eb09acb842f5a8003c5387dff52f679cdf7ea",
     "commitName": "feat: Calcular el precio neto de la compra multiplicando la cantidad por el precio unitario",
     "commitTimestamp": 1789005161578,
     "testId": 0
+  },
+  {
+    "numPassedTests": 1,
+    "failedTests": 0,
+    "numTotalTests": 1,
+    "timestamp": 1789005595098,
+    "success": false,
+    "testId": 1
+  },
+  {
+    "numPassedTests": 3,
+    "failedTests": 0,
+    "numTotalTests": 3,
+    "timestamp": 1789005647690,
+    "success": true,
+    "testId": 1
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: Se puede elegir el estado de una lista desplegable para evitar errores al introducir los estados",
+    "commitTimestamp": 1789006300219,
+    "testId": 1
   }
 ]
