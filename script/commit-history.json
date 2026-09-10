@@ -19,12 +19,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "1a5395e663fe497962fd6d296ddb3b0e6e5bd338",
     "author": "Nicole",
     "commit": {
       "date": "2026-09-10T02:11:38.000Z",
       "message": "feat: Se puede elegir el estado de una lista desplegable para evitar errores al introducir los estados",
-      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/HEAD"
+      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/1a5395e663fe497962fd6d296ddb3b0e6e5bd338"
     },
     "stats": {
       "total": 26,
@@ -34,6 +34,25 @@
     },
     "coverage": 100,
     "test_count": 3,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Nicole",
+    "commit": {
+      "date": "2026-09-10T02:31:03.000Z",
+      "message": "feat: Se puede ver el impuesto aplicado a la compra dependiendo del estado seleccionado",
+      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/HEAD"
+    },
+    "stats": {
+      "total": 49,
+      "additions": 45,
+      "deletions": 4,
+      "date": "2026-09-10"
+    },
+    "coverage": 50,
+    "test_count": 4,
     "failed_tests": 0,
     "conclusion": "success"
   }

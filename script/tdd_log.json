@@ -38,9 +38,31 @@
     "testId": 1
   },
   {
-    "commitId": "HEAD",
+    "commitId": "1a5395e663fe497962fd6d296ddb3b0e6e5bd338",
     "commitName": "feat: Se puede elegir el estado de una lista desplegable para evitar errores al introducir los estados",
     "commitTimestamp": 1789006300219,
     "testId": 1
+  },
+  {
+    "numPassedTests": 3,
+    "failedTests": 1,
+    "numTotalTests": 4,
+    "timestamp": 1789006640089,
+    "success": false,
+    "testId": 2
+  },
+  {
+    "numPassedTests": 4,
+    "failedTests": 0,
+    "numTotalTests": 4,
+    "timestamp": 1789006779828,
+    "success": true,
+    "testId": 2
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: Se puede ver el impuesto aplicado a la compra dependiendo del estado seleccionado",
+    "commitTimestamp": 1789007466414,
+    "testId": 2
   }
 ]
