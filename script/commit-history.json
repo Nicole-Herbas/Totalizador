@@ -380,17 +380,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "3c6e17b1df934b2efeb26a0306a254e163b83998",
     "author": "Nicole",
     "commit": {
       "date": "2026-09-10T05:33:01.000Z",
       "message": "test: validar opciones y cantidades",
-      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/HEAD"
+      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/3c6e17b1df934b2efeb26a0306a254e163b83998"
     },
     "stats": {
       "total": 23,
       "additions": 23,
       "deletions": 0,
+      "date": "2026-09-10"
+    },
+    "coverage": 97.99,
+    "test_count": 19,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Nicole",
+    "commit": {
+      "date": "2026-09-10T05:33:49.000Z",
+      "message": "fix: integrar validaciones del formulario",
+      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/HEAD"
+    },
+    "stats": {
+      "total": 18,
+      "additions": 12,
+      "deletions": 6,
       "date": "2026-09-10"
     },
     "coverage": 97.99,

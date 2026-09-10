@@ -576,9 +576,23 @@
     "testId": 20
   },
   {
-    "commitId": "HEAD",
+    "commitId": "3c6e17b1df934b2efeb26a0306a254e163b83998",
     "commitName": "test: validar opciones y cantidades",
     "commitTimestamp": 1789018382616,
     "testId": 20
+  },
+  {
+    "numPassedTests": 19,
+    "failedTests": 0,
+    "numTotalTests": 19,
+    "timestamp": 1789018406282,
+    "success": true,
+    "testId": 21
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "fix: integrar validaciones del formulario",
+    "commitTimestamp": 1789018431042,
+    "testId": 21
   }
 ]

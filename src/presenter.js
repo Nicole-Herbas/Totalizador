@@ -1,4 +1,4 @@
-import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria, DescuentoCategoria, CostoEnvio, ListaTipoCliente, TipoCliente, NuevoPrecioTotal } from "./totalizador.js";
+import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, PrecioTotal, ListaCategoria, ImpuestoCategoria, DescuentoCategoria, CostoEnvio, ListaTipoCliente, TipoCliente, PrecioTotalFinal, ValidarDatos } from "./totalizador.js";
 
 const first = document.querySelector("#cantidad-items");
 const second = document.querySelector("#precio-unitario");
@@ -86,10 +86,16 @@ tipoCliente.value = "Normal";
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const mensajeError = MensajeError(first.value, second.value, estado.value);
-  const mensajeInvalido = MensajeInvalido(first.value, second.value);
-  mensajeErrorDiv.textContent = mensajeError || mensajeInvalido;
-  if (mensajeError || mensajeInvalido) return;
+  const mensajeError = ValidarDatos(
+    first.value,
+    second.value,
+    pesoVolumetrico.value,
+    estado.value,
+    categoria.value,
+    tipoCliente.value,
+  );
+  mensajeErrorDiv.textContent = mensajeError;
+  if (mensajeError) return;
 
   const cantidad = Number.parseInt(first.value);
   const precio = Number.parseInt(second.value);
@@ -118,5 +124,5 @@ form.addEventListener("submit", (event) => {
   descuentoClienteDiv.innerHTML =
     "<p>Descuento para " + tipoCliente.value + " (" + tasasTipoCliente[tipoCliente.value] + "%) = $" + descuentoCliente + "</p>";
   precioTotalDiv.innerHTML =
-    "<p>Precio total (descuento e impuesto) = $" + PrecioTotalFinal(cantidad, precio, estado.value, categoria.value, Number.parseInt(pesoVolumetrico.value), tipoCliente.value, tipoCliente.value) + "</p>";
+    "<p>Precio total (descuento e impuesto) = $" + PrecioTotalFinal(cantidad, precio, estado.value, categoria.value, Number.parseInt(pesoVolumetrico.value), tipoCliente.value) + "</p>";
 });
