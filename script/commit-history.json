@@ -209,12 +209,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "1c8fad1d443da5083c1ba882676b761682f05749",
     "author": "Nicole",
     "commit": {
       "date": "2026-09-10T04:28:40.000Z",
       "message": "feat: Se puede ver el descuento aplicado dependiendo de la categoria del item",
-      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/HEAD"
+      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/1c8fad1d443da5083c1ba882676b761682f05749"
     },
     "stats": {
       "total": 61,
@@ -224,6 +224,25 @@
     },
     "coverage": 97.5,
     "test_count": 12,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Nicole",
+    "commit": {
+      "date": "2026-09-10T04:46:20.000Z",
+      "message": "feat: el usuario puede ver el costo de envio aplicado a su compra",
+      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/HEAD"
+    },
+    "stats": {
+      "total": 43,
+      "additions": 39,
+      "deletions": 4,
+      "date": "2026-09-10"
+    },
+    "coverage": 97.87,
+    "test_count": 13,
     "failed_tests": 0,
     "conclusion": "success"
   }

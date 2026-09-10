@@ -1,4 +1,4 @@
-import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria, DescuentoCategoria } from "./totalizador";
+import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria, DescuentoCategoria, CostoEnvio } from "./totalizador";
 
 describe("PrecioNeto", () => {
   it("Calcular el precio neto de la compra multiplicando la cantidad por el precio unitario", () => {
@@ -94,5 +94,18 @@ describe("DescuentoPorCategoria", () => {
     expect(DescuentoCategoria("Electrónicos", 1000)).toEqual(10);
     expect(DescuentoCategoria("Vestimenta", 1000)).toEqual(0);
     expect(DescuentoCategoria("Varios", 1000)).toEqual(0);
+  });
+});
+
+describe("PesoVolumetrico", () => {
+  it("El usuario puede ver el costo de envío de acuerdo al peso volumétrico que especifique el usuario", () => {
+    expect(CostoEnvio(9)).toEqual(0);
+    expect(CostoEnvio(19)).toEqual(3.5);
+    expect(CostoEnvio(30)).toEqual(5);
+    expect(CostoEnvio(50)).toEqual(6);
+    expect(CostoEnvio(90)).toEqual(6.5);
+    expect(CostoEnvio(150)).toEqual(8);
+    expect(CostoEnvio(250)).toEqual(9);
+
   });
 });

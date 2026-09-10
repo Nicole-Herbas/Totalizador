@@ -77,8 +77,8 @@ function MensajeInvalido(cantidad, precio) {
 function PrecioTotal(cantidad, precio, estado, categoria) {
   const neto = PrecioNeto(cantidad, precio);
   const impuesto = ImpuestoAplicado(estado, neto);
-  const descuento = Descuento(neto);
   const impuestoCategoria = ImpuestoCategoria(categoria, neto);
+  const descuento = Descuento(neto);
   return neto + impuesto + impuestoCategoria - descuento;
 }
 
@@ -142,4 +142,22 @@ function DescuentoCategoria(categoria, precio) {
   return Math.round(precio * descuento * 100) / 100;
 }
 
-export { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria, DescuentoCategoria };
+function CostoEnvio(pesoVolumetrico) {
+  let costo = 0;
+  if (pesoVolumetrico > 10 && pesoVolumetrico <= 20) {
+    costo = 3.5;
+  } else if (pesoVolumetrico > 20 && pesoVolumetrico <= 40) {
+    costo = 5;
+  } else if (pesoVolumetrico > 40 && pesoVolumetrico <= 80) {
+    costo = 6;
+  } else if (pesoVolumetrico > 80 && pesoVolumetrico <= 100) {
+    costo = 6.5;
+  } else if (pesoVolumetrico > 100 && pesoVolumetrico <= 200) {
+    costo = 8;
+  } else if (pesoVolumetrico > 200) {
+    costo = 9;
+  }
+  return costo;
+}
+
+export { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria, DescuentoCategoria, CostoEnvio };

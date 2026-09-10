@@ -338,9 +338,39 @@
     "testId": 11
   },
   {
-    "commitId": "HEAD",
+    "commitId": "1c8fad1d443da5083c1ba882676b761682f05749",
     "commitName": "feat: Se puede ver el descuento aplicado dependiendo de la categoria del item",
     "commitTimestamp": 1789014521040,
     "testId": 11
+  },
+  {
+    "numPassedTests": 11,
+    "failedTests": 2,
+    "numTotalTests": 13,
+    "timestamp": 1789014851020,
+    "success": false,
+    "testId": 12
+  },
+  {
+    "numPassedTests": 12,
+    "failedTests": 1,
+    "numTotalTests": 13,
+    "timestamp": 1789015137049,
+    "success": false,
+    "testId": 12
+  },
+  {
+    "numPassedTests": 13,
+    "failedTests": 0,
+    "numTotalTests": 13,
+    "timestamp": 1789015422578,
+    "success": true,
+    "testId": 12
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: el usuario puede ver el costo de envio aplicado a su compra",
+    "commitTimestamp": 1789015581612,
+    "testId": 12
   }
 ]

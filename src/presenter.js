@@ -1,4 +1,4 @@
-import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria, DescuentoCategoria } from "./totalizador.js";
+import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria, DescuentoCategoria, CostoEnvio } from "./totalizador.js";
 
 const first = document.querySelector("#cantidad-items");
 const second = document.querySelector("#precio-unitario");
@@ -12,6 +12,7 @@ const precioTotalDiv = document.querySelector("#precio-total");
 const mensajeErrorDiv = document.querySelector("#mensaje-error");
 const impuestoCategoriaDiv = document.querySelector("#impuesto-categoria");
 const descuentoCategoriaDiv = document.querySelector("#descuento-categoria");
+const costoEnvioDiv = document.querySelector("#costo-envio");
 const tasasImpuesto = {
   Utah: 6.65,
   Nevada: 8,
@@ -87,6 +88,8 @@ form.addEventListener("submit", (event) => {
     "<p>Impuesto para " + categoria.value + " (" + tasasImpuestoCategoria[categoria.value] + "%) = $" + ImpuestoCategoria(categoria.value, precioNeto) + "</p>";
   descuentoCategoriaDiv.innerHTML =
     "<p>Descuento para " + categoria.value + " (" + tasasDescuentoCategoria[categoria.value] + "%) = $" + DescuentoCategoria(categoria.value, precioNeto) + "</p>";
+  costoEnvioDiv.innerHTML =
+    "<p>Costo de envío = $" + CostoEnvio(0) + "</p>";
   precioTotalDiv.innerHTML =
     "<p>Precio total (descuento e impuesto) = $" + PrecioTotal(cantidad, precio, estado.value, categoria.value) + "</p>";
 });
