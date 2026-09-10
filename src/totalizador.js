@@ -89,6 +89,9 @@ function ValidarDatos(cantidad, precio, pesoVolumetrico, estado, categoria, tipo
   if (!Number.isFinite(Number(pesoVolumetrico))) {
     return "El peso volumetrico debe ser un numero valido";
   }
+  if (!Number.isInteger(Number(cantidad))) {
+    return "La cantidad de items debe ser un numero entero";
+  }
   if (Number(cantidad) <= 0) {
     return "La cantidad de items debe ser mayor que cero";
   }
@@ -97,6 +100,15 @@ function ValidarDatos(cantidad, precio, pesoVolumetrico, estado, categoria, tipo
   }
   if (Number(pesoVolumetrico) < 0) {
     return "El peso volumetrico no puede ser negativo";
+  }
+  if (!ListaEstados().includes(estado)) {
+    return "El estado seleccionado no es valido";
+  }
+  if (!ListaCategoria().includes(categoria)) {
+    return "La categoria seleccionada no es valida";
+  }
+  if (!ListaTipoCliente().includes(tipoCliente)) {
+    return "El tipo de cliente seleccionado no es valido";
   }
 
   return "";

@@ -361,12 +361,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "ee7279cf55c261f056facac9f279a03f07825616",
     "author": "Nicole",
     "commit": {
       "date": "2026-09-10T05:31:53.000Z",
       "message": "test: validar datos numericos invalidos",
-      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/HEAD"
+      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/ee7279cf55c261f056facac9f279a03f07825616"
     },
     "stats": {
       "total": 34,
@@ -376,6 +376,25 @@
     },
     "coverage": 97.16,
     "test_count": 18,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Nicole",
+    "commit": {
+      "date": "2026-09-10T05:33:01.000Z",
+      "message": "test: validar opciones y cantidades",
+      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/HEAD"
+    },
+    "stats": {
+      "total": 23,
+      "additions": 23,
+      "deletions": 0,
+      "date": "2026-09-10"
+    },
+    "coverage": 97.99,
+    "test_count": 19,
     "failed_tests": 0,
     "conclusion": "success"
   }

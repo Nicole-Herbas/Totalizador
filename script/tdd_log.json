@@ -554,9 +554,31 @@
     "testId": 19
   },
   {
-    "commitId": "HEAD",
+    "commitId": "ee7279cf55c261f056facac9f279a03f07825616",
     "commitName": "test: validar datos numericos invalidos",
     "commitTimestamp": 1789018315025,
     "testId": 19
+  },
+  {
+    "numPassedTests": 18,
+    "failedTests": 1,
+    "numTotalTests": 19,
+    "timestamp": 1789018336006,
+    "success": false,
+    "testId": 20
+  },
+  {
+    "numPassedTests": 19,
+    "failedTests": 0,
+    "numTotalTests": 19,
+    "timestamp": 1789018350363,
+    "success": true,
+    "testId": 20
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "test: validar opciones y cantidades",
+    "commitTimestamp": 1789018382616,
+    "testId": 20
   }
 ]

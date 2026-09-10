@@ -174,4 +174,15 @@ describe("ValidarDatos", () => {
     expect(ValidarDatos(2, 3, "abc", "Texas", "Varios", "Normal"))
       .toBe("El peso volumetrico debe ser un numero valido");
   });
+
+  it("rechaza selecciones invalidas y cantidades fraccionarias", () => {
+    expect(ValidarDatos(2.5, 3, 10, "Texas", "Varios", "Normal"))
+      .toBe("La cantidad de items debe ser un numero entero");
+    expect(ValidarDatos(2, 3, 10, "Atlantis", "Varios", "Normal"))
+      .toBe("El estado seleccionado no es valido");
+    expect(ValidarDatos(2, 3, 10, "Texas", "Desconocida", "Normal"))
+      .toBe("La categoria seleccionada no es valida");
+    expect(ValidarDatos(2, 3, 10, "Texas", "Varios", "Desconocido"))
+      .toBe("El tipo de cliente seleccionado no es valido");
+  });
 });
