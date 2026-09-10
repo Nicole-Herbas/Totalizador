@@ -316,9 +316,31 @@
     "testId": 10
   },
   {
-    "commitId": "HEAD",
+    "commitId": "c132608428083947ac4f1844040808cb5bf44b91",
     "commitName": "feat: el usuario puede ver el precio total de su compra incluyendo impuesto por clasificacion si aplica",
     "commitTimestamp": 1789014088644,
     "testId": 10
+  },
+  {
+    "numPassedTests": 11,
+    "failedTests": 1,
+    "numTotalTests": 12,
+    "timestamp": 1789014273882,
+    "success": false,
+    "testId": 11
+  },
+  {
+    "numPassedTests": 12,
+    "failedTests": 0,
+    "numTotalTests": 12,
+    "timestamp": 1789014488008,
+    "success": true,
+    "testId": 11
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: Se puede ver el descuento aplicado dependiendo de la categoria del item",
+    "commitTimestamp": 1789014521040,
+    "testId": 11
   }
 ]

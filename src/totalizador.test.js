@@ -1,4 +1,4 @@
-import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria } from "./totalizador";
+import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria, DescuentoCategoria } from "./totalizador";
 
 describe("PrecioNeto", () => {
   it("Calcular el precio neto de la compra multiplicando la cantidad por el precio unitario", () => {
@@ -82,5 +82,17 @@ describe("NuevoPrecioTotal", () => {
     expect(PrecioTotal(1000, 3, "Texas", "Electrónicos")).toEqual(3157.5);
     expect(PrecioTotal(1000, 3, "Texas", "Vestimenta")).toEqual(3097.5);
     expect(PrecioTotal(1000, 3, "Texas", "Varios")).toEqual(3037.5);
+  });
+});
+
+describe("DescuentoPorCategoria", () => {
+  it("Calcular el descuento aplicado a la compra por categoria", () => {
+    expect(DescuentoCategoria("Alimentos", 1000)).toEqual(20);
+    expect(DescuentoCategoria("Bebidas alcohólicas", 1000)).toEqual(0);
+    expect(DescuentoCategoria("Material de escritorio", 1000)).toEqual(15);
+    expect(DescuentoCategoria("Muebles", 1000)).toEqual(0);
+    expect(DescuentoCategoria("Electrónicos", 1000)).toEqual(10);
+    expect(DescuentoCategoria("Vestimenta", 1000)).toEqual(0);
+    expect(DescuentoCategoria("Varios", 1000)).toEqual(0);
   });
 });

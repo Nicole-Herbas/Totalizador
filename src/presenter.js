@@ -1,4 +1,4 @@
-import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria } from "./totalizador.js";
+import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria, DescuentoCategoria } from "./totalizador.js";
 
 const first = document.querySelector("#cantidad-items");
 const second = document.querySelector("#precio-unitario");
@@ -11,6 +11,7 @@ const descuentoDiv = document.querySelector("#descuento-aplicado");
 const precioTotalDiv = document.querySelector("#precio-total");
 const mensajeErrorDiv = document.querySelector("#mensaje-error");
 const impuestoCategoriaDiv = document.querySelector("#impuesto-categoria");
+const descuentoCategoriaDiv = document.querySelector("#descuento-categoria");
 const tasasImpuesto = {
   Utah: 6.65,
   Nevada: 8,
@@ -33,6 +34,15 @@ const tasasImpuestoCategoria = {
   "Electrónicos": 12,
   "Vestimenta": 6,
   "Varios": 4,
+};
+const tasasDescuentoCategoria = {
+  "Alimentos": 2,
+  "Bebidas alcohólicas": 0,
+  "Material de escritorio": 1.5,
+  "Muebles": 0,
+  "Electrónicos": 1,
+  "Vestimenta": 0,
+  "Varios": 0
 };
 
 ListaEstados().forEach((nombreEstado) => {
@@ -75,6 +85,8 @@ form.addEventListener("submit", (event) => {
     "<p>Impuesto para " + estado.value + " (" + tasasImpuesto[estado.value] + "%) = $" + impuesto + "</p>";
   impuestoCategoriaDiv.innerHTML =
     "<p>Impuesto para " + categoria.value + " (" + tasasImpuestoCategoria[categoria.value] + "%) = $" + ImpuestoCategoria(categoria.value, precioNeto) + "</p>";
-    precioTotalDiv.innerHTML =
+  descuentoCategoriaDiv.innerHTML =
+    "<p>Descuento para " + categoria.value + " (" + tasasDescuentoCategoria[categoria.value] + "%) = $" + DescuentoCategoria(categoria.value, precioNeto) + "</p>";
+  precioTotalDiv.innerHTML =
     "<p>Precio total (descuento e impuesto) = $" + PrecioTotal(cantidad, precio, estado.value, categoria.value) + "</p>";
 });

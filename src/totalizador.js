@@ -114,4 +114,32 @@ function ImpuestoCategoria(categoria, precio) {
   return Math.round(precio * impuesto * 100) / 100;
 }
 
-export { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria };
+function DescuentoCategoria(categoria, precio) {
+  let descuento = 0;
+  switch (categoria) {
+    case "Alimentos":
+      descuento = 0.02;
+      break;
+    case "Bebidas alcohólicas":
+      descuento = 0;
+      break;
+    case "Material de escritorio":
+      descuento = 0.015;
+      break;
+    case "Muebles":
+      descuento = 0;
+      break;
+    case "Electrónicos":
+      descuento = 0.01;
+      break;
+    case "Vestimenta":
+      descuento = 0;
+      break;
+    case "Varios":
+      descuento = 0;
+      break;
+  }
+  return Math.round(precio * descuento * 100) / 100;
+}
+
+export { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria, DescuentoCategoria };
