@@ -1,4 +1,4 @@
-import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal } from "./totalizador";
+import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria } from "./totalizador";
 
 describe("PrecioNeto", () => {
   it("Calcular el precio neto de la compra multiplicando la cantidad por el precio unitario", () => {
@@ -52,5 +52,11 @@ describe("MensajeInválido", () => {
 describe("PrecioTotal", () => {
   it("Calcular el precio total de la compra sumando el precio neto, el impuesto y restando el descuento", () => {
     expect(PrecioTotal(1000, 3, "Texas")).toEqual(3037.5);
+  });
+});
+
+describe("ListaCategoria", () => {
+  it("Elegir la categoria del item de una lista desplegable", () => {
+    expect(ListaCategoria()).toEqual(["Alimentos","Bebidas alcohólicas","Material de escritorio", "Muebles","Electrónicos","Vestimenta","Varios"]);
   });
 });

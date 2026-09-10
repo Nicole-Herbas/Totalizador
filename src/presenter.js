@@ -1,8 +1,9 @@
-import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal } from "./totalizador.js";
+import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria } from "./totalizador.js";
 
 const first = document.querySelector("#cantidad-items");
 const second = document.querySelector("#precio-unitario");
 const estado = document.querySelector("#codigo-estado");
+const categoria = document.querySelector("#categoria-item");
 const form = document.querySelector("#totalizar-form");
 const PrecioNetoDiv = document.querySelector("#precio-neto");
 const impuestoDiv = document.querySelector("#impuesto-aplicado");
@@ -30,6 +31,17 @@ ListaEstados().forEach((nombreEstado) => {
   opcion.textContent = nombreEstado;
   estado.appendChild(opcion);
 });
+
+estado.value = "California";
+
+ListaCategoria().forEach((nombreCategoria) => {
+  const opcion = document.createElement("option");
+  opcion.value = nombreCategoria;
+  opcion.textContent = nombreCategoria;
+  categoria.appendChild(opcion);
+});
+
+categoria.value = "Varios"; 
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();

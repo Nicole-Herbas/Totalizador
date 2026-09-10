@@ -81,4 +81,8 @@ function PrecioTotal(cantidad, precio, estado) {
   return neto + impuesto - descuento;
 }
 
-export { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal };
+function ListaCategoria() {
+  return ["Alimentos","Bebidas alcohólicas","Material de escritorio", "Muebles","Electrónicos","Vestimenta","Varios"];
+}
+
+export { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria };
