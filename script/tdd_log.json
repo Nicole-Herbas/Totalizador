@@ -112,9 +112,31 @@
     "testId": 4
   },
   {
-    "commitId": "HEAD",
+    "commitId": "a644e44a2640dad41f79f3f2aaaf8bc6a13a37fb",
     "commitName": "fix: redondear descuento aplicado a dos decimales",
     "commitTimestamp": 1789009117852,
     "testId": 4
+  },
+  {
+    "numPassedTests": 5,
+    "failedTests": 1,
+    "numTotalTests": 6,
+    "timestamp": 1789009488615,
+    "success": false,
+    "testId": 5
+  },
+  {
+    "numPassedTests": 6,
+    "failedTests": 0,
+    "numTotalTests": 6,
+    "timestamp": 1789009532510,
+    "success": true,
+    "testId": 5
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: El usuario puede ver un mensaje de error si se deja campos vacíos",
+    "commitTimestamp": 1789009602504,
+    "testId": 5
   }
 ]

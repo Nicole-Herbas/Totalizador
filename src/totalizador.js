@@ -49,4 +49,12 @@ function Descuento(precio) {
   return Math.round(precio * descuento);;
 }
 
-export { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento };
+function MensajeError(cantidad, precio, estado) {
+  if (cantidad === "" || precio === "" || estado === "") {
+    return "Por favor, complete todos los campos";
+  }
+
+  return "";
+}
+
+export { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError };

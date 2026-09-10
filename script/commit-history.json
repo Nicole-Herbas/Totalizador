@@ -76,12 +76,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "a644e44a2640dad41f79f3f2aaaf8bc6a13a37fb",
     "author": "Nicole",
     "commit": {
       "date": "2026-09-10T02:58:35.000Z",
       "message": "fix: redondear descuento aplicado a dos decimales",
-      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/HEAD"
+      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/a644e44a2640dad41f79f3f2aaaf8bc6a13a37fb"
     },
     "stats": {
       "total": 17,
@@ -91,6 +91,25 @@
     },
     "coverage": 100,
     "test_count": 5,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Nicole",
+    "commit": {
+      "date": "2026-09-10T03:06:39.000Z",
+      "message": "feat: El usuario puede ver un mensaje de error si se deja campos vacíos",
+      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/HEAD"
+    },
+    "stats": {
+      "total": 28,
+      "additions": 25,
+      "deletions": 3,
+      "date": "2026-09-10"
+    },
+    "coverage": 96.77,
+    "test_count": 6,
     "failed_tests": 0,
     "conclusion": "success"
   }

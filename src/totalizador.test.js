@@ -1,4 +1,4 @@
-import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento } from "./totalizador";
+import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError } from "./totalizador";
 
 describe("PrecioNeto", () => {
   it("Calcular el precio neto de la compra multiplicando la cantidad por el precio unitario", () => {
@@ -29,5 +29,13 @@ describe("Descuento", () => {
     expect(Descuento(7000)).toEqual(490);
     expect(Descuento(10000)).toEqual(1000);
     expect(Descuento(30000)).toEqual(4500);
+  });
+});
+
+describe("MensajeError", () => {
+  it("Mostrar mensaje de error cuando se deja campos vacios", () => {
+    expect(MensajeError("", 3, "Texas")).toBe("Por favor, complete todos los campos");
+    expect(MensajeError(2, "", "Texas")).toBe("Por favor, complete todos los campos");
+    expect(MensajeError(2, 3, "")).toBe("Por favor, complete todos los campos");
   });
 });
