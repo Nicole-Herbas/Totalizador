@@ -159,4 +159,19 @@ describe("ValidarDatos", () => {
     expect(ValidarDatos(2, 3, 10, "Texas", "Varios", ""))
       .toBe("Por favor, complete todos los campos");
   });
+
+  it("rechaza valores numericos invalidos", () => {
+    expect(ValidarDatos(0, 3, 10, "Texas", "Varios", "Normal"))
+      .toBe("La cantidad de items debe ser mayor que cero");
+    expect(ValidarDatos(2, 0, 10, "Texas", "Varios", "Normal"))
+      .toBe("El precio unitario debe ser mayor que cero");
+    expect(ValidarDatos(2, 3, -1, "Texas", "Varios", "Normal"))
+      .toBe("El peso volumetrico no puede ser negativo");
+    expect(ValidarDatos("abc", 3, 10, "Texas", "Varios", "Normal"))
+      .toBe("La cantidad de items debe ser un numero valido");
+    expect(ValidarDatos(2, "abc", 10, "Texas", "Varios", "Normal"))
+      .toBe("El precio unitario debe ser un numero valido");
+    expect(ValidarDatos(2, 3, "abc", "Texas", "Varios", "Normal"))
+      .toBe("El peso volumetrico debe ser un numero valido");
+  });
 });

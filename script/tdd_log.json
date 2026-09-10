@@ -532,9 +532,31 @@
     "testId": 18
   },
   {
-    "commitId": "HEAD",
+    "commitId": "56569398544abc13c2686e0e8463d9aabb3ff0ef",
     "commitName": "test: validar campos faltantes",
     "commitTimestamp": 1789018252952,
     "testId": 18
+  },
+  {
+    "numPassedTests": 17,
+    "failedTests": 1,
+    "numTotalTests": 18,
+    "timestamp": 1789018277770,
+    "success": false,
+    "testId": 19
+  },
+  {
+    "numPassedTests": 18,
+    "failedTests": 0,
+    "numTotalTests": 18,
+    "timestamp": 1789018290515,
+    "success": true,
+    "testId": 19
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "test: validar datos numericos invalidos",
+    "commitTimestamp": 1789018315025,
+    "testId": 19
   }
 ]

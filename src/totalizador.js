@@ -80,6 +80,25 @@ function ValidarDatos(cantidad, precio, pesoVolumetrico, estado, categoria, tipo
     return "Por favor, complete todos los campos";
   }
 
+  if (!Number.isFinite(Number(cantidad))) {
+    return "La cantidad de items debe ser un numero valido";
+  }
+  if (!Number.isFinite(Number(precio))) {
+    return "El precio unitario debe ser un numero valido";
+  }
+  if (!Number.isFinite(Number(pesoVolumetrico))) {
+    return "El peso volumetrico debe ser un numero valido";
+  }
+  if (Number(cantidad) <= 0) {
+    return "La cantidad de items debe ser mayor que cero";
+  }
+  if (Number(precio) <= 0) {
+    return "El precio unitario debe ser mayor que cero";
+  }
+  if (Number(pesoVolumetrico) < 0) {
+    return "El peso volumetrico no puede ser negativo";
+  }
+
   return "";
 }
 
