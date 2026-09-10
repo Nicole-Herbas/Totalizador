@@ -114,12 +114,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "98889d4330fa4fcd7913a956ce7375a16d9a17a9",
     "author": "Nicole",
     "commit": {
       "date": "2026-09-10T03:24:11.000Z",
       "message": "feat: El usuario puede ver un mensaje de error si ingresa valores invalidos",
-      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/HEAD"
+      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/98889d4330fa4fcd7913a956ce7375a16d9a17a9"
     },
     "stats": {
       "total": 37,
@@ -129,6 +129,25 @@
     },
     "coverage": 95,
     "test_count": 7,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Nicole",
+    "commit": {
+      "date": "2026-09-10T03:32:57.000Z",
+      "message": "feat: el usuario puede ver el precio total de su compra incluyendo impuesto o descuento si aplica",
+      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/HEAD"
+    },
+    "stats": {
+      "total": 30,
+      "additions": 24,
+      "deletions": 6,
+      "date": "2026-09-10"
+    },
+    "coverage": 95.45,
+    "test_count": 8,
     "failed_tests": 0,
     "conclusion": "success"
   }

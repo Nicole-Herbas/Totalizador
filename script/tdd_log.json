@@ -172,9 +172,39 @@
     "testId": 6
   },
   {
-    "commitId": "HEAD",
+    "commitId": "98889d4330fa4fcd7913a956ce7375a16d9a17a9",
     "commitName": "feat: El usuario puede ver un mensaje de error si ingresa valores invalidos",
     "commitTimestamp": 1789010654664,
     "testId": 6
+  },
+  {
+    "numPassedTests": 7,
+    "failedTests": 1,
+    "numTotalTests": 8,
+    "timestamp": 1789010816205,
+    "success": false,
+    "testId": 7
+  },
+  {
+    "numPassedTests": 7,
+    "failedTests": 1,
+    "numTotalTests": 8,
+    "timestamp": 1789010937255,
+    "success": false,
+    "testId": 7
+  },
+  {
+    "numPassedTests": 8,
+    "failedTests": 0,
+    "numTotalTests": 8,
+    "timestamp": 1789011128586,
+    "success": true,
+    "testId": 7
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: el usuario puede ver el precio total de su compra incluyendo impuesto o descuento si aplica",
+    "commitTimestamp": 1789011180438,
+    "testId": 7
   }
 ]

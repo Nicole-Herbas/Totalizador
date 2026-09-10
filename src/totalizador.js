@@ -74,4 +74,11 @@ function MensajeInvalido(cantidad, precio) {
   return "";
 }
 
-export { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido };
+function PrecioTotal(cantidad, precio, estado) {
+  const neto = PrecioNeto(cantidad, precio);
+  const impuesto = ImpuestoAplicado(estado, neto);
+  const descuento = Descuento(neto);
+  return neto + impuesto - descuento;
+}
+
+export { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal };

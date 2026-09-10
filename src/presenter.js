@@ -1,4 +1,4 @@
-import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido } from "./totalizador.js";
+import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal } from "./totalizador.js";
 
 const first = document.querySelector("#cantidad-items");
 const second = document.querySelector("#precio-unitario");
@@ -7,6 +7,7 @@ const form = document.querySelector("#totalizar-form");
 const PrecioNetoDiv = document.querySelector("#precio-neto");
 const impuestoDiv = document.querySelector("#impuesto-aplicado");
 const descuentoDiv = document.querySelector("#descuento-aplicado");
+const precioTotalDiv = document.querySelector("#precio-total");
 const mensajeErrorDiv = document.querySelector("#mensaje-error");
 const tasasImpuesto = {
   Utah: 6.65,
@@ -45,9 +46,11 @@ form.addEventListener("submit", (event) => {
   const descuento = Descuento(precioNeto);
 
   PrecioNetoDiv.innerHTML = 
-    "<p>Precio neto = " + precioNeto + "</p>";
+    "<p>Precio neto = $" + precioNeto + "</p>";
   descuentoDiv.innerHTML =
-    "<p>Descuento " + tasasDescuento[Object.keys(tasasDescuento).find((k) => Number(k) <= precioNeto)] + "% = " + descuento + "</p>";
+    "<p>Descuento " + tasasDescuento[Object.keys(tasasDescuento).find((k) => Number(k) <= precioNeto)] + "% = $" + descuento + "</p>";
   impuestoDiv.innerHTML =
-    "<p>Impuesto para " + estado.value + " (" + tasasImpuesto[estado.value] + "%) = " + impuesto + "</p>";
+    "<p>Impuesto para " + estado.value + " (" + tasasImpuesto[estado.value] + "%) = $" + impuesto + "</p>";
+  precioTotalDiv.innerHTML =
+    "<p>Precio total (descuento e impuesto) = $" + PrecioTotal(cantidad, precio, estado.value) + "</p>";
 });

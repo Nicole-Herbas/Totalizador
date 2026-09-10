@@ -1,4 +1,4 @@
-import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido } from "./totalizador";
+import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal } from "./totalizador";
 
 describe("PrecioNeto", () => {
   it("Calcular el precio neto de la compra multiplicando la cantidad por el precio unitario", () => {
@@ -46,5 +46,11 @@ describe("MensajeInválido", () => {
     expect(MensajeInvalido(2, 0)).toBe("El precio unitario no puede ser cero");
     expect(MensajeInvalido(-1, 3)).toBe("La cantidad de items debe ser un número positivo");
     expect(MensajeInvalido(2, -1)).toBe("El precio unitario debe ser un número positivo");
+  });
+});
+
+describe("PrecioTotal", () => {
+  it("Calcular el precio total de la compra sumando el precio neto, el impuesto y restando el descuento", () => {
+    expect(PrecioTotal(1000, 3, "Texas")).toEqual(3037.5);
   });
 });
