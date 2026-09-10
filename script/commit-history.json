@@ -323,12 +323,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "46d562b9920bc41b94a01e7531706d696f635125",
     "author": "Nicole",
     "commit": {
       "date": "2026-09-10T05:27:46.000Z",
       "message": "feat: calcula el precio total tomando en cuenta todo",
-      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/HEAD"
+      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/46d562b9920bc41b94a01e7531706d696f635125"
     },
     "stats": {
       "total": 99,
@@ -338,6 +338,25 @@
     },
     "coverage": 97.6,
     "test_count": 16,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Nicole",
+    "commit": {
+      "date": "2026-09-10T05:30:51.000Z",
+      "message": "test: validar campos faltantes",
+      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/HEAD"
+    },
+    "stats": {
+      "total": 30,
+      "additions": 28,
+      "deletions": 2,
+      "date": "2026-09-10"
+    },
+    "coverage": 96.9,
+    "test_count": 17,
     "failed_tests": 0,
     "conclusion": "success"
   }

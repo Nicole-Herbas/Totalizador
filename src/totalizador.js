@@ -74,6 +74,15 @@ function MensajeInvalido(cantidad, precio) {
   return "";
 }
 
+function ValidarDatos(cantidad, precio, pesoVolumetrico, estado, categoria, tipoCliente) {
+  if ([cantidad, precio, pesoVolumetrico, estado, categoria, tipoCliente]
+    .some((valor) => valor === "" || valor === null || valor === undefined)) {
+    return "Por favor, complete todos los campos";
+  }
+
+  return "";
+}
+
 function PrecioTotal(cantidad, precio, estado, categoria) {
   const neto = PrecioNeto(cantidad, precio);
   const impuesto = ImpuestoAplicado(estado, neto);
@@ -258,4 +267,4 @@ function PrecioTotalFinal(
   ) / 100;
 }
 
-export { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria, DescuentoCategoria, CostoEnvio, ListaTipoCliente, TipoCliente, DescuentoTipoCliente, PrecioTotalFinal };
+export { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, ValidarDatos, PrecioTotal, ListaCategoria, ImpuestoCategoria, DescuentoCategoria, CostoEnvio, ListaTipoCliente, TipoCliente, DescuentoTipoCliente, PrecioTotalFinal };

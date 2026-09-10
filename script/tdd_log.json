@@ -502,9 +502,39 @@
     "testId": 17
   },
   {
-    "commitId": "HEAD",
+    "commitId": "46d562b9920bc41b94a01e7531706d696f635125",
     "commitName": "feat: calcula el precio total tomando en cuenta todo",
     "commitTimestamp": 1789018068031,
     "testId": 17
+  },
+  {
+    "numPassedTests": 16,
+    "failedTests": 0,
+    "numTotalTests": 16,
+    "timestamp": 1789018198764,
+    "success": true,
+    "testId": 18
+  },
+  {
+    "numPassedTests": 16,
+    "failedTests": 1,
+    "numTotalTests": 17,
+    "timestamp": 1789018217402,
+    "success": false,
+    "testId": 18
+  },
+  {
+    "numPassedTests": 17,
+    "failedTests": 0,
+    "numTotalTests": 17,
+    "timestamp": 1789018230116,
+    "success": true,
+    "testId": 18
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "test: validar campos faltantes",
+    "commitTimestamp": 1789018252952,
+    "testId": 18
   }
 ]

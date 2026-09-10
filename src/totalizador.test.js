@@ -1,4 +1,4 @@
-import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria, DescuentoCategoria, CostoEnvio, TipoCliente, DescuentoTipoCliente, PrecioTotalFinal } from "./totalizador";
+import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria, DescuentoCategoria, CostoEnvio, TipoCliente, DescuentoTipoCliente, PrecioTotalFinal, ValidarDatos } from "./totalizador";
 
 describe("PrecioNeto", () => {
   it("Calcular el precio neto de la compra multiplicando la cantidad por el precio unitario", () => {
@@ -142,4 +142,21 @@ describe("Nuevo precio TOTAL", () => {
 
   });
 
+});
+
+describe("ValidarDatos", () => {
+  it("rechaza informacion faltante", () => {
+    expect(ValidarDatos("", 3, 10, "Texas", "Varios", "Normal"))
+      .toBe("Por favor, complete todos los campos");
+    expect(ValidarDatos(2, "", 10, "Texas", "Varios", "Normal"))
+      .toBe("Por favor, complete todos los campos");
+    expect(ValidarDatos(2, 3, "", "Texas", "Varios", "Normal"))
+      .toBe("Por favor, complete todos los campos");
+    expect(ValidarDatos(2, 3, 10, "", "Varios", "Normal"))
+      .toBe("Por favor, complete todos los campos");
+    expect(ValidarDatos(2, 3, 10, "Texas", "", "Normal"))
+      .toBe("Por favor, complete todos los campos");
+    expect(ValidarDatos(2, 3, 10, "Texas", "Varios", ""))
+      .toBe("Por favor, complete todos los campos");
+  });
 });
