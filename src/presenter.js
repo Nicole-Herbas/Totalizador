@@ -13,6 +13,7 @@ const mensajeErrorDiv = document.querySelector("#mensaje-error");
 const impuestoCategoriaDiv = document.querySelector("#impuesto-categoria");
 const descuentoCategoriaDiv = document.querySelector("#descuento-categoria");
 const costoEnvioDiv = document.querySelector("#costo-envio");
+const pesoVolumetrico = document.querySelector("#peso-volumetrico");
 const tasasImpuesto = {
   Utah: 6.65,
   Nevada: 8,
@@ -77,6 +78,9 @@ form.addEventListener("submit", (event) => {
   const precioNeto = PrecioNeto(cantidad, precio);
   const impuesto = ImpuestoAplicado(estado.value, precioNeto);
   const descuento = Descuento(precioNeto);
+  const impuestoCategoria = ImpuestoCategoria(categoria.value, precioNeto);
+  const descuentoCategoria = DescuentoCategoria(categoria.value, precioNeto);
+  const costoEnvio = CostoEnvio(Number.parseInt(pesoVolumetrico.value));
 
   PrecioNetoDiv.innerHTML = 
     "<p>Precio neto = $" + precioNeto + "</p>";
@@ -85,11 +89,11 @@ form.addEventListener("submit", (event) => {
   impuestoDiv.innerHTML =
     "<p>Impuesto para " + estado.value + " (" + tasasImpuesto[estado.value] + "%) = $" + impuesto + "</p>";
   impuestoCategoriaDiv.innerHTML =
-    "<p>Impuesto para " + categoria.value + " (" + tasasImpuestoCategoria[categoria.value] + "%) = $" + ImpuestoCategoria(categoria.value, precioNeto) + "</p>";
+    "<p>Impuesto para " + categoria.value + " (" + tasasImpuestoCategoria[categoria.value] + "%) = $" + impuestoCategoria + "</p>";
   descuentoCategoriaDiv.innerHTML =
-    "<p>Descuento para " + categoria.value + " (" + tasasDescuentoCategoria[categoria.value] + "%) = $" + DescuentoCategoria(categoria.value, precioNeto) + "</p>";
+    "<p>Descuento para " + categoria.value + " (" + tasasDescuentoCategoria[categoria.value] + "%) = $" + descuentoCategoria + "</p>";
   costoEnvioDiv.innerHTML =
-    "<p>Costo de envío = $" + CostoEnvio(0) + "</p>";
+    "<p>Costo de envío = $" + costoEnvio + "</p>";
   precioTotalDiv.innerHTML =
     "<p>Precio total (descuento e impuesto) = $" + PrecioTotal(cantidad, precio, estado.value, categoria.value) + "</p>";
 });

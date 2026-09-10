@@ -228,16 +228,35 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "cc8f1b70beb81c6ff55a7851959974158fab2e3b",
     "author": "Nicole",
     "commit": {
       "date": "2026-09-10T04:46:20.000Z",
       "message": "feat: el usuario puede ver el costo de envio aplicado a su compra",
-      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/HEAD"
+      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/cc8f1b70beb81c6ff55a7851959974158fab2e3b"
     },
     "stats": {
       "total": 43,
       "additions": 39,
+      "deletions": 4,
+      "date": "2026-09-10"
+    },
+    "coverage": 97.87,
+    "test_count": 13,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Nicole",
+    "commit": {
+      "date": "2026-09-10T04:49:13.000Z",
+      "message": "feat: el usuario puede ingresar el peso volumetrico por unidad",
+      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/HEAD"
+    },
+    "stats": {
+      "total": 13,
+      "additions": 9,
       "deletions": 4,
       "date": "2026-09-10"
     },

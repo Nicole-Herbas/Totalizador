@@ -368,9 +368,31 @@
     "testId": 12
   },
   {
-    "commitId": "HEAD",
+    "commitId": "cc8f1b70beb81c6ff55a7851959974158fab2e3b",
     "commitName": "feat: el usuario puede ver el costo de envio aplicado a su compra",
     "commitTimestamp": 1789015581612,
     "testId": 12
+  },
+  {
+    "numPassedTests": 12,
+    "failedTests": 1,
+    "numTotalTests": 13,
+    "timestamp": 1789015622570,
+    "success": false,
+    "testId": 13
+  },
+  {
+    "numPassedTests": 13,
+    "failedTests": 0,
+    "numTotalTests": 13,
+    "timestamp": 1789015716539,
+    "success": true,
+    "testId": 13
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: el usuario puede ingresar el peso volumetrico por unidad",
+    "commitTimestamp": 1789015754740,
+    "testId": 13
   }
 ]

@@ -106,6 +106,5 @@ describe("PesoVolumetrico", () => {
     expect(CostoEnvio(90)).toEqual(6.5);
     expect(CostoEnvio(150)).toEqual(8);
     expect(CostoEnvio(250)).toEqual(9);
-
   });
 });
