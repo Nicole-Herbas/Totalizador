@@ -1,4 +1,4 @@
-import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria, DescuentoCategoria, CostoEnvio } from "./totalizador.js";
+import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria, DescuentoCategoria, CostoEnvio, ListaTipoCliente, TipoCliente } from "./totalizador.js";
 
 const first = document.querySelector("#cantidad-items");
 const second = document.querySelector("#precio-unitario");
@@ -14,6 +14,8 @@ const impuestoCategoriaDiv = document.querySelector("#impuesto-categoria");
 const descuentoCategoriaDiv = document.querySelector("#descuento-categoria");
 const costoEnvioDiv = document.querySelector("#costo-envio");
 const pesoVolumetrico = document.querySelector("#peso-volumetrico");
+const tipoCliente = document.querySelector("#tipo-cliente");
+const descuentoClienteDiv = document.querySelector("#descuento-cliente");
 const tasasImpuesto = {
   Utah: 6.65,
   Nevada: 8,
@@ -46,6 +48,12 @@ const tasasDescuentoCategoria = {
   "Vestimenta": 0,
   "Varios": 0
 };
+const tasasTipoCliente = {
+  "Normal": 0,
+  "Recurrente": 0.5,
+  "Antiguo Recurrente": 1,
+  "Especial": 1.5
+};
 
 ListaEstados().forEach((nombreEstado) => {
   const opcion = document.createElement("option");
@@ -65,6 +73,15 @@ ListaCategoria().forEach((nombreCategoria) => {
 
 categoria.value = "Varios"; 
 
+ListaTipoCliente().forEach((nombreTipoCliente) => {
+  const opcion = document.createElement("option");
+  opcion.value = nombreTipoCliente;
+  opcion.textContent = nombreTipoCliente;
+  tipoCliente.appendChild(opcion);
+});
+
+tipoCliente.value = "Normal";
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -81,6 +98,7 @@ form.addEventListener("submit", (event) => {
   const impuestoCategoria = ImpuestoCategoria(categoria.value, precioNeto);
   const descuentoCategoria = DescuentoCategoria(categoria.value, precioNeto);
   const costoEnvio = CostoEnvio(Number.parseInt(pesoVolumetrico.value), cantidad);
+  const descuentoCliente = TipoCliente(precioNeto, tipoCliente.value);
 
   PrecioNetoDiv.innerHTML = 
     "<p>Precio neto = $" + precioNeto + "</p>";
@@ -94,6 +112,8 @@ form.addEventListener("submit", (event) => {
     "<p>Descuento para " + categoria.value + " (" + tasasDescuentoCategoria[categoria.value] + "%) = $" + descuentoCategoria + "</p>";
   costoEnvioDiv.innerHTML =
     "<p>Costo de envío = $" + costoEnvio + "</p>";
+  descuentoClienteDiv.innerHTML =
+    "<p>Descuento para " + tipoCliente.value + " (" + tasasTipoCliente[tipoCliente.value] + "%) = $" + descuentoCliente + "</p>";
   precioTotalDiv.innerHTML =
     "<p>Precio total (descuento e impuesto) = $" + PrecioTotal(cantidad, precio, estado.value, categoria.value) + "</p>";
 });

@@ -160,4 +160,27 @@ function CostoEnvio(pesoVolumetrico, cantidad) {
   return costo;
 }
 
-export { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria, DescuentoCategoria, CostoEnvio };
+function ListaTipoCliente() {
+  return ["Normal", "Recurrente", "Antiguo Recurrente", "Especial"];
+}
+
+function TipoCliente(valor, tipo) {
+  let tarifa = 0;
+  switch (tipo) {
+    case "Normal":
+      tarifa = 0;
+      break;
+    case "Recurrente":
+      tarifa = 0.05;
+      break;
+    case "Antiguo Recurrente":
+      tarifa = 0.05;
+      break;
+    case "Especial":
+      tarifa = 0.09;
+      break;
+  }
+  return tarifa;
+}
+
+export { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria, DescuentoCategoria, CostoEnvio, ListaTipoCliente, TipoCliente };

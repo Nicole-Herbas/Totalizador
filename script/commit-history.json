@@ -266,12 +266,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "90ef5d0a7929c9982ecd5ccd4f32f6795af6f24b",
     "author": "Nicole",
     "commit": {
       "date": "2026-09-10T04:51:47.000Z",
       "message": "fix: el usuario puede ver correctamente el costo por el peso volumetrico unitario multiplicado por la cantidad",
-      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/HEAD"
+      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/90ef5d0a7929c9982ecd5ccd4f32f6795af6f24b"
     },
     "stats": {
       "total": 30,
@@ -281,6 +281,25 @@
     },
     "coverage": 97.87,
     "test_count": 13,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Nicole",
+    "commit": {
+      "date": "2026-09-10T05:05:27.000Z",
+      "message": "feat: El usuario puede ver si tiene descuento de envio por su tipo de usuario",
+      "url": "https://github.com/Nicole-Herbas/Totalizador/commit/HEAD"
+    },
+    "stats": {
+      "total": 61,
+      "additions": 58,
+      "deletions": 3,
+      "date": "2026-09-10"
+    },
+    "coverage": 97.17,
+    "test_count": 14,
     "failed_tests": 0,
     "conclusion": "success"
   }

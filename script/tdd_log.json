@@ -412,9 +412,47 @@
     "testId": 14
   },
   {
-    "commitId": "HEAD",
+    "commitId": "90ef5d0a7929c9982ecd5ccd4f32f6795af6f24b",
     "commitName": "fix: el usuario puede ver correctamente el costo por el peso volumetrico unitario multiplicado por la cantidad",
     "commitTimestamp": 1789015908685,
     "testId": 14
+  },
+  {
+    "numPassedTests": 13,
+    "failedTests": 1,
+    "numTotalTests": 14,
+    "timestamp": 1789016211164,
+    "success": false,
+    "testId": 15
+  },
+  {
+    "numPassedTests": 13,
+    "failedTests": 1,
+    "numTotalTests": 14,
+    "timestamp": 1789016511730,
+    "success": false,
+    "testId": 15
+  },
+  {
+    "numPassedTests": 13,
+    "failedTests": 1,
+    "numTotalTests": 14,
+    "timestamp": 1789016585133,
+    "success": false,
+    "testId": 15
+  },
+  {
+    "numPassedTests": 14,
+    "failedTests": 0,
+    "numTotalTests": 14,
+    "timestamp": 1789016665363,
+    "success": true,
+    "testId": 15
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: El usuario puede ver si tiene descuento de envio por su tipo de usuario",
+    "commitTimestamp": 1789016728767,
+    "testId": 15
   }
 ]

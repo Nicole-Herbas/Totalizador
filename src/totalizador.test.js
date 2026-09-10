@@ -1,4 +1,4 @@
-import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria, DescuentoCategoria, CostoEnvio } from "./totalizador";
+import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria, DescuentoCategoria, CostoEnvio, TipoCliente } from "./totalizador";
 
 describe("PrecioNeto", () => {
   it("Calcular el precio neto de la compra multiplicando la cantidad por el precio unitario", () => {
@@ -106,5 +106,14 @@ describe("PesoVolumetrico", () => {
     expect(CostoEnvio(90, 1)).toEqual(6.5);
     expect(CostoEnvio(150, 1)).toEqual(8);
     expect(CostoEnvio(250, 1)).toEqual(9);
+  });
+});
+
+describe("Tipo de cliente", () => {
+  it("El usuario puede ver la aplicación de tarifas especiales para el costo de envio de acuerdo al tipo de client", () => {
+    expect(TipoCliente(10, "Normal")).toEqual(0);
+    expect(TipoCliente(10, "Recurrente")).toEqual(0.05);
+    expect(TipoCliente(5, "Antiguo Recurrente")).toEqual(0.05);
+    expect(TipoCliente(6, "Especial")).toEqual(0.09);
   });
 });
