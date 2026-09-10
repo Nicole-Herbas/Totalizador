@@ -16,6 +16,7 @@ const costoEnvioDiv = document.querySelector("#costo-envio");
 const pesoVolumetrico = document.querySelector("#peso-volumetrico");
 const tipoCliente = document.querySelector("#tipo-cliente");
 const descuentoClienteDiv = document.querySelector("#descuento-cliente");
+const descuentoTipoClienteDiv = document.querySelector("#descuento-tipo-cliente");
 const tasasImpuesto = {
   Utah: 6.65,
   Nevada: 8,
@@ -104,6 +105,8 @@ form.addEventListener("submit", (event) => {
     "<p>Precio neto = $" + precioNeto + "</p>";
   descuentoDiv.innerHTML =
     "<p>Descuento " + tasasDescuento[Object.keys(tasasDescuento).find((k) => Number(k) <= precioNeto)] + "% = $" + descuento + "</p>";
+  descuentoTipoClienteDiv.innerHTML =
+    "<p>Descuento para " + tipoCliente.value + " (" + tasasTipoCliente[tipoCliente.value] + "%) = $" + descuentoCliente + "</p>";
   impuestoDiv.innerHTML =
     "<p>Impuesto para " + estado.value + " (" + tasasImpuesto[estado.value] + "%) = $" + impuesto + "</p>";
   impuestoCategoriaDiv.innerHTML =

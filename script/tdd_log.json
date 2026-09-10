@@ -450,9 +450,31 @@
     "testId": 15
   },
   {
-    "commitId": "HEAD",
+    "commitId": "5923cd963754c3c4033bbf9949849ba696abdc4f",
     "commitName": "feat: El usuario puede ver si tiene descuento de envio por su tipo de usuario",
     "commitTimestamp": 1789016728767,
     "testId": 15
+  },
+  {
+    "numPassedTests": 14,
+    "failedTests": 1,
+    "numTotalTests": 15,
+    "timestamp": 1789016888318,
+    "success": false,
+    "testId": 16
+  },
+  {
+    "numPassedTests": 15,
+    "failedTests": 0,
+    "numTotalTests": 15,
+    "timestamp": 1789017071334,
+    "success": true,
+    "testId": 16
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: el usuario puede ver un descuento especifico si cumple con categroia, precio neto y tipo",
+    "commitTimestamp": 1789017106098,
+    "testId": 16
   }
 ]

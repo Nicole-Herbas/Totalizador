@@ -183,4 +183,21 @@ function TipoCliente(valor, tipo) {
   return tarifa;
 }
 
-export { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria, DescuentoCategoria, CostoEnvio, ListaTipoCliente, TipoCliente };
+function DescuentoTipoCliente(precioNeto, tipo, categoria) {
+  let descuento = 0;
+  switch (tipo) {
+    case "Recurrente":
+      if (precioNeto > 3000 && categoria === "Alimentos") {
+        descuento = 100;
+      }
+      break;
+    case "Especial":
+      if (precioNeto > 7000 && categoria === "Electrónicos") {
+        descuento = 200;
+      }
+      break;
+  }
+  return descuento;
+}
+
+export { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria, DescuentoCategoria, CostoEnvio, ListaTipoCliente, TipoCliente, DescuentoTipoCliente };

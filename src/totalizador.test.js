@@ -1,4 +1,4 @@
-import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria, DescuentoCategoria, CostoEnvio, TipoCliente } from "./totalizador";
+import { PrecioNeto, ListaEstados, ImpuestoAplicado, Descuento, MensajeError, MensajeInvalido, PrecioTotal, ListaCategoria, ImpuestoCategoria, DescuentoCategoria, CostoEnvio, TipoCliente, DescuentoTipoCliente } from "./totalizador";
 
 describe("PrecioNeto", () => {
   it("Calcular el precio neto de la compra multiplicando la cantidad por el precio unitario", () => {
@@ -115,5 +115,12 @@ describe("Tipo de cliente", () => {
     expect(TipoCliente(10, "Recurrente")).toEqual(0.05);
     expect(TipoCliente(5, "Antiguo Recurrente")).toEqual(0.05);
     expect(TipoCliente(6, "Especial")).toEqual(0.09);
+  });
+});
+
+describe("Descuento por tipo de cliente", () => {
+  it("El usuario puede ver la aplicación de descuentos especiales de acuerdo al tipo de cliente, precio neto y categoria del producto", () => {
+    expect(DescuentoTipoCliente(4000, "Recurrente", "Alimentos")).toEqual(100);
+    expect(DescuentoTipoCliente(8000, "Especial", "Electrónicos")).toEqual(200);
   });
 });
